@@ -15,16 +15,16 @@
 <!-- to see wireframes, set physics='debug: true' -->
 <a-scene stats physics="debug: false">
     <a-assets>
-        <img id="texture-wall" src="blacktexture.png">
-        <img id="texture-wall-blue" src="blacktexture.png">
-        <img id="texture-wall-red" src="blacktexture.png">
-        <img id="texture-floor" src="blacktexture.png">
+        <img id="texture-wall" src="whitetexture.png">
+        <img id="texture-wall-blue" src="whitetexture.png">
+        <img id="texture-wall-red" src="whitetexture.png">
+        <img id="texture-floor" src="blacktexture.png" >
         <a-box id="wall-one"
                static-body material="src: #texture-wall"
-               depth="1" width="4" height="2"></a-box>
+               depth="0.1" width="4" height="3"></a-box>
         <a-box id="end-cap"
                static-body color="red"
-               depth="1.1" width="1.1" height="2"></a-box>
+               depth="0.1" width="0.1" height="3"></a-box>
     </a-assets>
     <a-sky id="sky" src="street.jpg"></a-sky>
     <a-box id="center"
@@ -44,7 +44,7 @@
            color="tomato"></a-box>
 
     <a-entity id="maze1"
-              maze='size: 10 10; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
+              maze='size: 20 20; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
               position='0 0.5 0'
               rotation='0 0 0'></a-entity>
 
