@@ -18,8 +18,14 @@
         init: function () {
             var COLORS = ['red', 'green', 'blue'];
             this.el.addEventListener('click', function (evt) {
-                var randomIndex = Math.floor(Math.random() * COLORS.length);
-                this.setAttribute('material', 'color', COLORS[randomIndex]);
+                var isTrue= this.getAttribute("answer")
+                if (isTrue=="true"){
+                    var sceneEl = document.querySelector('a-scene');
+                    console.log(sceneEl.querySelector('#center'));
+                    sceneEl.querySelector('#center').parentNode.removeChild( sceneEl.querySelector('#center'));
+                } else {
+                    this.setAttribute('material', 'color', "red");
+                }
                 console.log('I was clicked at: ', evt.detail.intersection.point);
             });
         }
@@ -78,26 +84,26 @@
               <!--sound="src: url(3705.mp3); autoplay: true"></a-entity>-->
     <a-box id="center"
            position="0 0 0"
-           color="red"
+           color="blue"
            depth="0.5" width="2.5" height="5">
         <a-entity position="-1.1 1.8 0.32"
                   bmfont-text="text: Question: You're about to login to your bank account. What should you check?; width: 500 "></a-entity>
         <a-box class="clickable" cursor-listener
                position="0 1.5 0"
-                color="green"
-                depth="0.7" width="2.5" height="0.5">
-            <a-entity position="-1.2 -0.25 0.4" bmfont-text="text: a. If the page has SSL certificate.; width: 500 "></a-entity>
+                color="blue"
+                depth="0.7" width="2.5" height="0.5" answer="true">
+            <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. If the page has SSL certificate.; width: 500 "></a-entity>
         </a-box>
         <a-box class="clickable" cursor-listener
                position="0 1 0"
-                color="yellow"
-                depth="0.7" width="2.5" height="0.5">
+                color="blue"
+                depth="0.7" width="2.5" height="0.5" answer="false"  >
             <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. If the page is colorful.; width: 500 "></a-entity>
         </a-box>
         <a-box class="clickable" cursor-listener
                position="0 0.5 0"
                 color="blue"
-                depth="0.7" width="2.5" height="0.5">
+                depth="0.7" width="2.5" height="0.5" answer="false"  >
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: b. If the page looks like the bank page.; width: 500 "></a-entity>
         </a-box>
     </a-box>
@@ -107,10 +113,10 @@
               kinematic-body
               position="-20 20.8 20" look-controls wasd-controls>
         <a-entity position="0 0 -3"
-                  geometry="primitive: ring; radiusOuter: 0.20;
-                          radiusInner: 0.10;"
+                  geometry="primitive: ring; radiusOuter: 0.10;
+                          radiusInner: 0.05;"
                   material="color: cyan; shader: flat"
-                  cursor="maxDistance: 30; fuse: false"
+                  cursor="maxDistance: 20; fuse: true"
                   raycaster="objects: .clickable"
         >
 
