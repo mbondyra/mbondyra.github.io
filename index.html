@@ -5,7 +5,7 @@
     <title>Maze: Don't get lost in Banking Security</title>
     <meta name="description" content="demo: aframe-maze-component">
     <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
-    <script src="aframe-gamepad-controls.min.js"></script>
+    
 
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.0/dist/aframe-physics-system.min.js"></script>
@@ -216,7 +216,6 @@
     </a-box>
     <a-entity id="player"
               camera
-              gamepad-controls
               universal-controls
               kinematic-body
               look-controls
@@ -252,7 +251,7 @@
               position='0 1.5 0'
               rotation='0 0 0'></a-entity>
 
-    <a-box id="ground" position='0 -0.5 0' width="2000" height="1" depth="2000" static-body
+    <a-box id="ground" position='0 -1 0' width="2000" height="2" depth="2000" static-body
            material="src: #texture-floor">
     </a-box>
 
