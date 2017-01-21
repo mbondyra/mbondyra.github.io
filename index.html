@@ -24,15 +24,33 @@
             });
         }
     });
+
+    AFRAME.registerComponent('cursor-listener-promo1', {
+        init: function () {
+            this.el.addEventListener('click', function (evt) {
+                console.log('I was clicked at: ', evt.detail.intersection.point);
+
+                this.playSound();
+
+            });
+        }
+    });
 </script>
 <!-- see: https://github.com/donmccurdy/aframe-physics-system -->
-<!-- to see wireframes, set physics='debug: true' -->
+<!-- to see wireframes, set physics='debug: true' , stats-->
 <a-scene physics="debug: false">
     <a-assets>
+        <audio id="crowdCheer" src="3705.mp3" preload="auto">
+
         <img id="texture-wall" src="whitetexture.png">
         <img id="texture-wall-blue" src="whitetexture.png">
         <img id="texture-wall-red" src="whitetexture.png">
-        <img id="texture-floor" src="blacktexture.png">
+        <img id="texture-floor" src="blacktexture.png" >
+
+        <img id="promo1" src="promo1.png" >
+        <img id="promo2" src="promo2.jpg" >
+        <img id="promo3" src="promo3.jpg" >
+        <img id="promo4" src="promo4.jpg" >
 
         <a-mixin id="cube" geometry="primitive: box"></a-mixin>
         <a-mixin id="cube-hovered" material="color: magenta"></a-mixin>
@@ -51,6 +69,13 @@
                depth="0.1" width="0.1" height="3"></a-box>
     </a-assets>
     <a-sky id="sky" src="street.jpg"></a-sky>
+
+    <a-entity class="clickable" id="promo1" geometry="primitive: box" material="src: #promo1" cursor-listener-promo1
+              position="2 2 0" sound="src: #crowdCheer"></a-entity>
+
+
+    <!--<a-entity id="elmo" geometry="primitive: box" material="src: promo1.png" position="1 2 0"-->
+              <!--sound="src: url(3705.mp3); autoplay: true"></a-entity>-->
     <a-box id="center"
            position="0 0 0"
            color="red"
@@ -105,7 +130,7 @@
 
 
     <a-entity id="maze1"
-              maze='size: 2 2; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
+              maze='size: 20 20; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
               position='0 0.5 0'
               rotation='0 0 0'></a-entity>
 
