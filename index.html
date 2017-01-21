@@ -81,7 +81,7 @@
 
     <!--<a-entity id="elmo" geometry="primitive: box" material="src: promo1.png" position="1 2 0"-->
               <!--sound="src: url(3705.mp3); autoplay: true"></a-entity>-->
-    <a-box id="center"
+    <a-box id="center" cursor-listener-question
            position="-38.5 1.5 37"
            color="white"
            depth="0.5" width="3" height="3">
@@ -106,7 +106,7 @@
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. If the page looks like the bank page.; width: 500 "></a-entity>
         </a-box>
     </a-box>
-    <a-box id="center2"
+    <a-box id="center2" cursor-listener-question
            position="-30.5 1.5 30"
            color="white"
            depth="0.5" width="3" height="3">
@@ -131,7 +131,7 @@
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. You're refusing. Bank never asks about that; width: 500 "></a-entity>
         </a-box>
     </a-box>
-    <a-box id="center3"
+    <a-box id="center3" cursor-listener-question
            position="-30.5 1.5 25"
            color="white"
            depth="0.5" width="3" height="3">
@@ -157,7 +157,7 @@
         </a-box>
     </a-box>
 
-    <a-box id="center4"
+    <a-box id="center4" cursor-listener-question
            position="-25.5 1.5 25"
            color="white"
            depth="0.5" width="3" height="3">
@@ -174,6 +174,31 @@
                color="lightgray"
                depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center4"  >
             <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. You're looking carefully if there are some cameras installed or there are some overlays on pinpad or card hole. ; width: 500 "></a-entity>
+        </a-box>
+    </a-box>
+    <a-box id="center5" cursor-listener-question
+           position="-20.5 1.5 20"
+           color="white"
+           depth="0.5" width="3" height="3">
+        <a-entity position="-1.1 0.4 0.32"
+                  bmfont-text="text: Question: What information can be required by the call centre?; width: 500 "></a-entity>
+        <a-box class="clickable" cursor-listener
+               position="0 0 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center5">
+            <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. Full name; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -0.55 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center5"  >
+            <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. Your PIN number; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -1.1 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center5"  >
+            <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c.  online banking password; width: 500 "></a-entity>
         </a-box>
     </a-box>
     <a-entity id="player"
