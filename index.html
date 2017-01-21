@@ -48,6 +48,11 @@
 <a-scene physics="debug: false">
     <a-assets>
         <audio id="crowdCheer" src="3705.mp3" preload="auto"></audio>
+        <audio id="firstQuestion" src="3705.mp3" preload="auto"></audio>
+        <audio id="secondQuestion" src="3705.mp3" preload="auto"></audio>
+        <audio id="thirdQuestion" src="3705.mp3" preload="auto"></audio>
+        <audio id="forthQuestion" src="3705.mp3" preload="auto"></audio>
+        <audio id="fifthQuestion" src="3705.mp3" preload="auto"></audio>
 
         <img id="texture-wall" src="whitetexture.png">
         <img id="texture-wall-blue" src="whitetexture.png">
@@ -89,7 +94,7 @@
 
     <!--<a-entity id="elmo" geometry="primitive: box" material="src: promo1.png" position="1 2 0"-->
               <!--sound="src: url(3705.mp3); autoplay: true"></a-entity>-->
-    <a-box id="center" cursor-listener-question
+    <a-box id="center" cursor-listener-promo1  sound="src: #firstQuestion" class="clickable"
            position="-38.5 1.5 37"
            color="white"
            depth="0.5" width="3" height="3">
@@ -114,7 +119,7 @@
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. If the page looks like the bank page.; width: 500 "></a-entity>
         </a-box>
     </a-box>
-    <a-box id="center2" cursor-listener-question
+    <a-box id="center2" cursor-listener-promo1  sound="src: #secondQuestion" class="clickable"
            position="-30.5 1.5 30"
            color="white"
            depth="0.5" width="3" height="3">
@@ -139,7 +144,7 @@
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. You're refusing. Bank never asks about that; width: 500 "></a-entity>
         </a-box>
     </a-box>
-    <a-box id="center3" cursor-listener-question
+    <a-box id="center3" cursor-listener-promo1  sound="src: #thirdQuestion" class="clickable"
            position="-30.5 1.5 25"
            color="white"
            depth="0.5" width="3" height="3">
@@ -165,7 +170,7 @@
         </a-box>
     </a-box>
 
-    <a-box id="center4" cursor-listener-question
+    <a-box id="center4" cursor-listener-promo1 sound="src: #forthQuestion" class="clickable"
            position="-25.5 1.5 25"
            color="white"
            depth="0.5" width="3" height="3">
@@ -184,7 +189,7 @@
             <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. You're looking carefully if there are some cameras installed or there are some overlays on pinpad or card hole. ; width: 500 "></a-entity>
         </a-box>
     </a-box>
-    <a-box id="center5" cursor-listener-question
+    <a-box id="center5" cursor-listener-promo1 sound="src: #fifthQuestion" class="clickable"
            position="-20.5 1.5 20"
            color="white"
            depth="0.5" width="3" height="3">
