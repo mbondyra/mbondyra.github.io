@@ -21,8 +21,8 @@
                 var isTrue= this.getAttribute("answer")
                 if (isTrue=="true"){
                     var sceneEl = document.querySelector('a-scene');
-                    console.log(sceneEl.querySelector('#center'));
-                    sceneEl.querySelector('#center').parentNode.removeChild( sceneEl.querySelector('#center'));
+                    console.log(sceneEl.querySelector(this.getAttribute("parentn")));
+                    sceneEl.querySelector(this.getAttribute("parentn")).parentNode.removeChild( sceneEl.querySelector(this.getAttribute("parentn")));
                 } else {
                     this.setAttribute('material', 'color', "red");
                 }
@@ -45,7 +45,7 @@
 <!-- to see wireframes, set physics='debug: true' , stats-->
 <a-scene physics="debug: false">
     <a-assets>
-        <audio id="crowdCheer" src="3705.mp3" preload="auto">
+        <audio id="crowdCheer" src="3705.mp3" preload="auto"></audio>
 
         <img id="texture-wall" src="whitetexture.png">
         <img id="texture-wall-blue" src="whitetexture.png">
@@ -82,68 +82,96 @@
     <!--<a-entity id="elmo" geometry="primitive: box" material="src: promo1.png" position="1 2 0"-->
               <!--sound="src: url(3705.mp3); autoplay: true"></a-entity>-->
     <a-box id="center"
-           position="0 0 0"
-           color="blue"
-           depth="0.5" width="2.5" height="5">
-        <a-entity position="-1.1 1.8 0.32"
+           position="-38.5 1.5 37"
+           color="white"
+           depth="0.5" width="3" height="3">
+        <a-entity position="-1.1 0.4 0.32"
                   bmfont-text="text: Question: You're about to login to your bank account. What should you check?; width: 500 "></a-entity>
         <a-box class="clickable" cursor-listener
-               position="0 1.5 0"
-                color="blue"
-                depth="0.7" width="2.5" height="0.5" answer="true">
+               position="0 0 0"
+                color="lightgray"
+                depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center">
             <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. If the page has SSL certificate.; width: 500 "></a-entity>
         </a-box>
         <a-box class="clickable" cursor-listener
-               position="0 1 0"
-                color="blue"
-                depth="0.7" width="2.5" height="0.5" answer="false"  >
+               position="0 -0.55 0"
+                color="lightgray"
+                depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center"  >
             <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. If the page is colorful.; width: 500 "></a-entity>
         </a-box>
         <a-box class="clickable" cursor-listener
-               position="0 0.5 0"
-                color="blue"
-                depth="0.7" width="2.5" height="0.5" answer="false"  >
-            <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: b. If the page looks like the bank page.; width: 500 "></a-entity>
+               position="0 -1.1 0"
+                color="lightgray"
+                depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center"  >
+            <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. If the page looks like the bank page.; width: 500 "></a-entity>
+        </a-box>
+    </a-box>
+    <a-box id="center2"
+           position="-30.5 1.5 30"
+           color="white"
+           depth="0.5" width="3" height="3">
+        <a-entity position="-1.1 0.4 0.32"
+                  bmfont-text="text: Question: A woman claiming that she's a bank employee calls and asks for your PIN number.; width: 500 "></a-entity>
+        <a-box class="clickable" cursor-listener
+               position="0 0 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center2">
+            <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. You're giving it immediately; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -0.55 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center2"  >
+            <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. You're asking her some questions and then giving it; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -1.1 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center2"  >
+            <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. You're refusing. Bank never asks about that; width: 500 "></a-entity>
         </a-box>
     </a-box>
     <a-entity id="player"
               camera
               universal-controls
               kinematic-body
-              position="-20 20.8 20" look-controls wasd-controls>
+              look-controls
+              position="-40 20.8 40">
         <a-entity position="0 0 -3"
                   geometry="primitive: ring; radiusOuter: 0.10;
                           radiusInner: 0.05;"
                   material="color: cyan; shader: flat"
-                  cursor="maxDistance: 20; fuse: true"
+                  cursor="maxDistance: 1; fuse: true;  timeout: 2000"
                   raycaster="objects: .clickable"
         >
 
             <a-animation begin="click" easing="ease-in" attribute="scale"
                          fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
             <a-animation begin="fusing" easing="ease-in" attribute="scale"
-                         fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+                         fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="5000"></a-animation>
         </a-entity>
+        <a-entity position="-40 0 -40"
+                  geometry="box"
+        >   </a-entity>
     </a-entity>
 
 
     <!-- birds-eye view box to stand on -->
     <a-box static-body
            depth="0.25" height="0.5" width="0.5"
-           position="-20 19.8 20"
+           position="-40 19.8 40"
            color="tomato"></a-box>
 
 
     <a-entity id="maze1"
-              maze='size: 20 20; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
-              position='0 0.5 0'
+              maze='size: 20 20; wall: #wall-one; cap: #end-cap; open: S 0 N 0 2 4 E 5;'
+              position='0 1.5 0'
               rotation='0 0 0'></a-entity>
 
-    <a-box id="ground" position='0 -0.5 0' width="200" height="1" depth="200" static-body
+    <a-box id="ground" position='0 -0.5 0' width="2000" height="1" depth="2000" static-body
            material="src: #texture-floor">
     </a-box>
 
-    <!--<a-grid id="ground" width="100" height="100" src:"texture-floor"></a-grid>-->
 
 </a-scene>
 <script>
