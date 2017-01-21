@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>simple demo: aframe-maze-component</title>
+    <title>Maze: Don't get lost in Banking Security</title>
     <meta name="description" content="demo: aframe-maze-component">
     <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
@@ -15,18 +15,18 @@
 <!-- to see wireframes, set physics='debug: true' -->
 <a-scene stats physics="debug: false">
     <a-assets>
-        <img id="texture-wall" src="img/arrow-left.png">
-        <img id="texture-wall-blue" src="img/arrow-left-blue.png">
-        <img id="texture-wall-red" src="img/arrow-left-red.png">
-        <img id="texture-floor" src="img/floor-texture-1.jpg">
+        <img id="texture-wall" src="blacktexture.png">
+        <img id="texture-wall-blue" src="blacktexture.png">
+        <img id="texture-wall-red" src="blacktexture.png">
+        <img id="texture-floor" src="blacktexture.png">
         <a-box id="wall-one"
                static-body material="src: #texture-wall"
-               depth="1" width="4" height="1"></a-box>
+               depth="1" width="4" height="2"></a-box>
         <a-box id="end-cap"
-               static-body color="#444444"
+               static-body color="red"
                depth="1.1" width="1.1" height="2"></a-box>
     </a-assets>
-    <a-sky id="sky" color="#0000ff"></a-sky>
+    <a-sky id="sky" src="street.jpg"></a-sky>
     <a-box id="center"
            position="0 0 0"
            color="red"
@@ -44,14 +44,14 @@
            color="tomato"></a-box>
 
     <a-entity id="maze1"
-              maze='size: 5 6; wall: #wall-one; cap: #end-cap; open: S 0 N 1 2 4 E 5;'
+              maze='size: 10 10; wall: #wall-one; cap: #end-cap; open: S 1 N 1 2 4 E 5;'
               position='0 0.5 0'
               rotation='0 0 0'></a-entity>
-    <!--
+
     <a-box id="ground" position='0 -0.5 0' width="200" height="1" depth="200" static-body material="src: #texture-floor">
     </a-box>
-    -->
-    <a-grid id="ground" width="200" height="200" static-body></a-grid>
+
+    <!--<a-grid id="ground" width="100" height="100" src:"texture-floor"></a-grid>-->
 
 </a-scene>
 <script>
