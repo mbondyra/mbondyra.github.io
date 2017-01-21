@@ -5,6 +5,8 @@
     <title>Maze: Don't get lost in Banking Security</title>
     <meta name="description" content="demo: aframe-maze-component">
     <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <script src="aframe-gamepad-controls.min.js"></script>
+
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
     <script src="http://cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.0/dist/aframe-physics-system.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
@@ -75,8 +77,14 @@
     </a-assets>
     <a-sky id="sky" src="street.jpg"></a-sky>
 
-    <a-entity class="clickable" id="promo1" geometry="primitive: box" material="src: #promo1" cursor-listener-promo1
-              position="2 2 0" sound="src: #crowdCheer"></a-entity>
+    <a-entity class="clickable" id="promo1" geometry="primitive: box; height: 2; width:0.1; depth: 2" material="src: #promo1" cursor-listener-promo1
+              position="-39.9 1.25 38" sound="src: #crowdCheer"></a-entity>
+    <a-entity class="clickable" id="promo2" geometry="primitive: box; height: 2; width:0.1; depth: 2" material="src: #promo2" cursor-listener-promo1
+              position="-39.9 1.25 35" sound="src: #crowdCheer"></a-entity>
+    <a-entity class="clickable" id="promo3" geometry="primitive: box; height: 2; width:0.1; depth: 2" material="src: #promo3" cursor-listener-promo1
+              position="-39.9 1.25 32" sound="src: #crowdCheer"></a-entity>
+    <a-entity class="clickable" id="promo4" geometry="primitive: box; height: 2; width:0.1; depth: 2" material="src: #promo4" cursor-listener-promo1
+              position="-39.9 1.25 29" sound="src: #crowdCheer"></a-entity>
 
 
     <!--<a-entity id="elmo" geometry="primitive: box" material="src: promo1.png" position="1 2 0"-->
@@ -203,6 +211,7 @@
     </a-box>
     <a-entity id="player"
               camera
+              gamepad-controls
               universal-controls
               kinematic-body
               look-controls
@@ -242,6 +251,7 @@
            material="src: #texture-floor">
     </a-box>
 
+    <!--<a-grid id="ground" width="100" height="100" src:"texture-floor"></a-grid>-->
 
 </a-scene>
 <script>
