@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A-Frame Street Demo</title>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-assets>
+        <a-mixin id="red" material="color: red"></a-mixin>
+        <a-mixin id="green" material="color: green"></a-mixin>
+        <a-mixin id="blue" material="color: blue"></a-mixin>
+        <a-mixin id="yellow" material="color: yellow"></a-mixin>
+        <a-mixin id="orange" material="color: orange"></a-mixin>
+        <a-mixin id="gray" material="color: gray"></a-mixin>
+        <a-mixin id="red" material="color: #B76705"></a-mixin>
+        <a-mixin id="red" material="color: #B76705"></a-mixin>
+        <img id="darktexture" src="blacktexture.png">
+    </a-assets>
+    <a-entity position="30 40 30">
+        <a-camera></a-camera>
+    </a-entity>
+    <a-box mixin="red" depth="0.1" height="10" width="30" position="0 0 0"></a-box>
+    <a-box mixin="green" depth="0.1" height="10" width="90" position="70 0 0"></a-box>
+    <a-box mixin="green" depth="0.1" height="10" width="130" position="50 0 -90"></a-box>
+    <a-box mixin="blue" depth="0.1" height="10" width="80" position="65 0 -30"></a-box>
+    <a-box mixin="yellow" depth="30" height="10" width="0.1" position="25 0 -15"></a-box>
+    <a-box mixin="orange" depth="30" height="10" width="0.1" position="15 0 -15"></a-box>
+    <a-box mixin="gray" depth="90" height="10" width="0.1" position="-15 0 -45"></a-box>
+    <a-box mixin="red" depth="90" height="10" width="0.1" position="115 0 -45"></a-box>
+    <a-box mixin="red" depth="90" height="10" width="0.1" position="115 0 -45"></a-box>
+
+    <a-sky src="street.jpg"></a-sky>
+</a-scene>
+</body>
+</html>
