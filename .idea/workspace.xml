@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="569bb1c6-d8cb-41b3-9d28-4714cef4bdc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3705.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/3727.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/promo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/promo2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/promo3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/promo4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/q01.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/q02.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/q03.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/q04.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/q05.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -34,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="72" column="116" lean-forward="false" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="116" />
+            <state relative-caret-position="22">
+              <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -56,6 +54,9 @@
       <find>blue</find>
       <find>mp3</find>
       <find>crowdch</find>
+      <find>20</find>
+      <find>2040</find>
+      <find>scene</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -643,6 +644,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="569bb1c6-d8cb-41b3-9d28-4714cef4bdc6" name="Default" comment="" />
@@ -652,7 +656,7 @@
       <updated>1484951036358</updated>
       <workItem from="1484951039195" duration="855000" />
       <workItem from="1484986181897" duration="4778000" />
-      <workItem from="1484998742574" duration="10349000" />
+      <workItem from="1484998742574" duration="19114000" />
     </task>
     <task id="LOCAL-00001" summary="new maze">
       <created>1485000853972</created>
@@ -668,11 +672,46 @@
       <option name="project" value="LOCAL" />
       <updated>1485001056798</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="better and better&#10;">
+      <created>1485010901083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1485010901083</updated>
+    </task>
+    <task id="LOCAL-00004" summary="better and better&#10;">
+      <created>1485011765956</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1485011765956</updated>
+    </task>
+    <task id="LOCAL-00005" summary="better and better&#10;gamepad">
+      <created>1485018830800</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1485018830800</updated>
+    </task>
+    <task id="LOCAL-00006" summary="better and better&#10;gamepad">
+      <created>1485018918655</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1485018918655</updated>
+    </task>
+    <task id="LOCAL-00007" summary="better and better&#10;gamepad">
+      <created>1485019547547</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1485019547547</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15982000" />
+    <option name="totallyTimeSpent" value="24747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -726,7 +765,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new maze" />
     <MESSAGE value="texture" />
-    <option name="LAST_COMMIT_MESSAGE" value="texture" />
+    <MESSAGE value="better and better&#10;" />
+    <MESSAGE value="better and better&#10;gamepad" />
+    <option name="LAST_COMMIT_MESSAGE" value="better and better&#10;gamepad" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -749,10 +790,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indexOld.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="72" column="116" lean-forward="false" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="116" />
+        <state relative-caret-position="22">
+          <caret line="36" column="27" lean-forward="true" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding />
         </state>
       </provider>
