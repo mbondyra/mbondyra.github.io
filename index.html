@@ -131,6 +131,51 @@
             <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. You're refusing. Bank never asks about that; width: 500 "></a-entity>
         </a-box>
     </a-box>
+    <a-box id="center3"
+           position="-30.5 1.5 25"
+           color="white"
+           depth="0.5" width="3" height="3">
+        <a-entity position="-1.1 0.4 0.32"
+                  bmfont-text="text: Question: You're receiving an email with the link that you should immediately change your password.; width: 500 "></a-entity>
+        <a-box class="clickable" cursor-listener
+               position="0 0 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center3">
+            <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. You're veryfying the sender and then do it; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -0.55 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center3"  >
+            <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. You're checking carefully the url and then change it; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -1.1 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center3"  >
+            <a-entity position="-1.2 -0.25  0.4"  bmfont-text="text: c. You're ignoring the mail; width: 500 "></a-entity>
+        </a-box>
+    </a-box>
+
+    <a-box id="center4"
+           position="-25.5 1.5 25"
+           color="white"
+           depth="0.5" width="3" height="3">
+        <a-entity position="-1.1 0.4 0.32"
+                  bmfont-text="text: Question: You have to withdraw some money from the ATM; width: 500 "></a-entity>
+        <a-box class="clickable" cursor-listener
+               position="0 0 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="false" parentn = "#center4">
+            <a-entity position="-1.2 -0.25 0.4"  bmfont-text="text: a. You're just doing it, what can happen?; width: 500 "></a-entity>
+        </a-box>
+        <a-box class="clickable" cursor-listener
+               position="0 -1 0"
+               color="lightgray"
+               depth="0.7" width="2.5" height="0.5" answer="true" parentn = "#center4"  >
+            <a-entity position="-1.2 -0.25  0.4" bmfont-text="text: b. You're looking carefully if there are some cameras installed or there are some overlays on pinpad or card hole. ; width: 500 "></a-entity>
+        </a-box>
+    </a-box>
     <a-entity id="player"
               camera
               universal-controls
