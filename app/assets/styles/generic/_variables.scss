@@ -1,0 +1,15 @@
+$font-stack:
+    (group: arial, id: regular, font: ("Arial", sans-serif), weight: 400, style: normal),
+    (group: arial, id: bold, font: ("Arial", sans-serif), weight: 700, style: normal);
+
+
+$color-stack:
+        (group: white, id: normal, color: #FFFFFF),
+        (group: black, id: normal, color: #112433),
+        (group: gray, id: normal, color: #80878c),
+        (group: gray, id: light, color: #e2e9ed),
+        (group: maroon, id: normal, color: #7a3052),
+        (group: green, id: normal, color: #359b79);
+
+
+$screen-md: 992px !default;

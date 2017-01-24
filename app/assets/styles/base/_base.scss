@@ -1,0 +1,52 @@
+html {
+  font-size: 14px;
+  @include font(arial, regular);
+  background-color: color(gray, light);
+}
+
+body {
+
+  background-color: color(gray, light);
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
+h1 {
+  font-size: 10vw;
+  line-height: 0.8;
+  font-weight: bold;
+
+  @include respond-from(desktop-small) {
+    font-size: 60pt;
+  }
+}
+
+a {
+  color: color(gray);
+  text-decoration: none;
+
+}
+
+header{
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+* {
+  outline: none;
+}
+

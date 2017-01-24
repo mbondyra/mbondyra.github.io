@@ -1,0 +1,37 @@
+@mixin font($group, $id:regular) {
+     @each $font in $font-stack{
+        @if($group == map-get($font, group) and $id == map-get($font, id)) {
+            font-family: map-get($font, font);
+            font-weight: map-get($font, weight);
+            font-style: map-get($font, style);
+        }
+    }
+}
+
+@mixin respond-from($media) {
+     @if $media == mobile{
+        @media only screen and (min-width: $screen-xs) {
+             @content;
+        }
+    }
+    @else if $media == tablet {
+         @media only screen and (min-width: $screen-sm){
+            @content;
+        }
+    }
+    @else if $media == desktop-small {
+         @media only screen and (min-width: $screen-md){
+            @content;
+        }
+    }
+    @else if $media == desktop {
+         @media only screen and (min-width: $screen-lg){
+            @content;
+        }
+    }
+    @else {
+         @media only screen and (min-width: $media){
+            @content;
+        }
+    }
+}

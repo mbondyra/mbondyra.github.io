@@ -1,0 +1,12 @@
+/bower_components
+/node_modules
+/.idea
+/web
+/docs
+/config/auth-rsync.js
+/config/auth-ftp.js
+/config/server.js
+.DS_Store
+
+node_modules
+idea
