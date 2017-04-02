@@ -283,8 +283,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2.default.createElement("img", { id: "door", src: "./door.jpg" }),
 	                    _react2.default.createElement("asset-item", { id: "dementor-obj", src: "./models/Dementor/Dementor.obj" }),
 	                    _react2.default.createElement("asset-item", { id: "dementor-mtl", src: "./models/Dementor/Dementor.mtl" }),
-	                    _react2.default.createElement("asset-item", { id: "voldemort-obj", src: "./models/Voldemort/LordVoldemort.obj" }),
-	                    _react2.default.createElement("asset-item", { id: "voldemort-mtl", src: "./models/Voldemort/LordVoldemort.mtl" }),
+	                    _react2.default.createElement("asset-item", { id: "voldemort-obj", src: "./models/voldemort/LordVoldemort.obj" }),
+	                    _react2.default.createElement("asset-item", { id: "voldemort-mtl", src: "./models/voldemort/LordVoldemort.mtl" }),
 	                    _react2.default.createElement("asset-item", { id: "rock-obj", src: "./models/rock/Rock1.obj" }),
 	                    _react2.default.createElement("asset-item", { id: "rock-mtl", src: "./models/rock/Rock1.mtl" })
 	                ),
