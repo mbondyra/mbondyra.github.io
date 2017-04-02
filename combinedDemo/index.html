@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+</head>
+
+<body>
+<a-scene>
+
+    <a-assets>
+        <a-asset-item id="crate-obj" src="models/Dementor/Dementor.obj"></a-asset-item>
+        <a-asset-item id="crate-mtl" src="models/Dementor/Dementor.mtl"></a-asset-item>
+    </a-assets>
+
+    &lt;!&ndash; Using the asset management system. &ndash;&gt;
+    <a-obj-model src="#crate-obj" mtl="#crate-mtl"  scale="0.1 0.1 0.1" position="0 0 -20" rotation="0 180 0">
+        <a-animation attribute="position"
+                     dur="10000"
+                     fill="forwards"
+                     to="0 0 10"
+                     repeat="indefinite"></a-animation>
+    </a-obj-model>
+    <a-camera position="0 7 5">
+        <a-cursor color="#FF0000"/>
+    </a-camera>
+
+</a-scene>
+<script>
+    document.querySelector("a-obj-model").addEventListener("click", function(){
+        const animationObj =  this.querySelector("a-animation");
+        animationObj.setAttribute("to","0 20 0");
+        animationObj.setAttribute("dur","1000");
+        animationObj.setAttribute("repeat","1");
+    })
+</script><!--
+<script>
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+    var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
+    var spells = ['expecto patronum', 'ekspecto patronum', 'ekspekto patronum'];
+    var grammar = '#JSGF V1.0; grammar spells; public <spell> = ' + spells.join(' | ') + ' ;'
+
+    var recognition = new SpeechRecognition();
+    var speechRecognitionList = new SpeechGrammarList();
+    speechRecognitionList.addFromString(grammar, 1);
+    recognition.grammars = speechRecognitionList;
+    //recognition.continuous = false;
+    recognition.lang = 'pl-PL';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+
+    (function () {
+
+        recognition.start();
+        console.log('Ready to receive a color command.');
+    })();
+
+    recognition.onresult = function (event) {
+
+        var last = event.results.length - 1;
+        var color = event.results[last][0].transcript;
+//    document.getElementById("darkness").removeAttribute("light");
+        //document.getElementById("darkness").parentNode.removeChild(document.getElementById("darkness"));
+
+        console.log('Confidence: ' + event.results[0][0].confidence);
+        console.log(color);
+        const animationObj =  document.querySelector("a-animation");
+        animationObj.setAttribute("to","0 20 0");
+        animationObj.setAttribute("dur","1000");
+        animationObj.setAttribute("repeat","1");
+
+    }
+
+    recognition.onspeechend = function () {
+        recognition.stop();
+    }
+
+    recognition.onend = function () {
+        recognition.start();
+    }
+
+    recognition.onnomatch = function (event) {
+        diagnostic.textContent = "I didn't recognise that color.";
+    }
+
+    recognition.onerror = function (event) {
+        diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+    }
+</script>-->
+</body>
+</html>
