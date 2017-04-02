@@ -30181,6 +30181,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    height: this.state.height
 	                }),
 	                _react2.default.createElement(_DementorsRoom2.default, {
+	
+	                    doorVisible: this.state.doorVisible,
 	                    stoneVisible: this.state.stoneVisible,
 	                    dementorsVisible: this.state.dementorsVisible,
 	                    dementorsRoom: this.state.dementorsRoom,
@@ -30428,9 +30430,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            height: props.height
 	        })
 	    );
-	}; /**
-	    * Created by rdors on 2017-04-02.
-	    */
+	};
 
 /***/ },
 /* 484 */
@@ -30454,19 +30454,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Created by rdors on 2017-04-02.
 	 */
 	exports.default = function (props) {
-	    return _react2.default.createElement(_aframeReact.Entity, {
-	        material: {
-	            src: '#door',
-	            visible: props.doorVisible,
-	            side: "double"
+	    var animation = props.doorVisible ? "" : _react2.default.createElement("a-animation", { attribute: "rotation",
+	        dur: "1000",
+	        to: "0 90 0",
+	        repeat: "0.5" });
+	
+	    return _react2.default.createElement(
+	        _aframeReact.Entity,
+	        {
+	            material: {
+	                src: '#door',
+	                side: "double"
+	            },
+	            position: "0 " + (props.height / 2 - 1) + " " + -props.lumosRoom,
+	            geometry: {
+	                primitive: "plane",
+	                width: "2",
+	                height: props.height
+	            }
 	        },
-	        position: "0 " + (props.height / 2 - 1) + " " + -props.lumosRoom,
-	        geometry: {
-	            primitive: "plane",
-	            width: "2",
-	            height: props.height
-	        }
-	    });
+	        animation
+	    );
 	};
 
 /***/ },
@@ -30492,6 +30500,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function (props) {
+	    var animation = "";
+	    if (!props.dementorsVisible) {
+	        animation = _react2.default.createElement("a-animation", { attribute: "position",
+	            dur: "1000",
+	            to: "0 1000 0",
+	            repeat: "1" });
+	    } else if (!props.doorVisible) {
+	        animation = _react2.default.createElement("a-animation", { attribute: "rotation",
+	            dur: "10000",
+	            to: "0 360 0",
+	            repeat: "indefinite" });
+	    }
 	    return _react2.default.createElement(
 	        _aframeReact.Entity,
 	        null,
@@ -30522,25 +30542,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _react2.default.createElement(
 	            _aframeReact.Entity,
 	            { scale: "0.04 0.04 0.04",
-	                visible: props.dementorsVisible,
 	                position: "0 0.3 " + (-props.dementorsRoom + props.y / 15), rotation: "0 180 0" },
-	            _react2.default.createElement("a-obj-model", { src: "#dementor-obj", mtl: "#dementor-mtl" })
+	            _react2.default.createElement(
+	                "a-obj-model",
+	                { src: "#dementor-obj", mtl: "#dementor-mtl" },
+	                animation
+	            )
 	        ),
 	        _react2.default.createElement(
 	            _aframeReact.Entity,
 	            { scale: "0.04 0.04 0.04",
-	                visible: props.dementorsVisible,
 	                position: (props.x / 2 - 1) / 2 + 1 + " 0.3 " + (-props.dementorsRoom + props.y / 15),
 	                rotation: "0 180 0" },
-	            _react2.default.createElement("a-obj-model", { src: "#dementor-obj", mtl: "#dementor-mtl" })
+	            _react2.default.createElement(
+	                "a-obj-model",
+	                { src: "#dementor-obj", mtl: "#dementor-mtl" },
+	                animation
+	            )
 	        ),
 	        _react2.default.createElement(
 	            _aframeReact.Entity,
 	            { scale: "0.04 0.04 0.04",
-	                visible: props.dementorsVisible,
 	                position: -((props.x / 2 - 1) / 2 + 1) + " 0.3 " + (-props.dementorsRoom + props.y / 15),
 	                rotation: "0 180 0" },
-	            _react2.default.createElement("a-obj-model", { src: "#dementor-obj", mtl: "#dementor-mtl" })
+	            _react2.default.createElement(
+	                "a-obj-model",
+	                { src: "#dementor-obj", mtl: "#dementor-mtl" },
+	                animation
+	            )
 	        ),
 	        _react2.default.createElement(_Stone2.default, {
 	            stoneVisible: props.stoneVisible,
@@ -30600,15 +30629,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function (props) {
+	
+	    var animation = props.voldemortVisible ? "" : _react2.default.createElement("a-animation", { attribute: "rotation",
+	        dur: "1000",
+	        to: "0 0 90",
+	        repeat: "0.5" });
+	
 	    return _react2.default.createElement(
 	        _aframeReact.Entity,
 	        null,
 	        _react2.default.createElement(
 	            _aframeReact.Entity,
 	            { scale: "0.04 0.04 0.04",
-	                visible: props.voldemortVisible,
 	                position: "0 0.01 " + (-props.y + props.y / 6), rotation: "0 0 0" },
-	            _react2.default.createElement("a-obj-model", { src: "#voldemort-obj", mtl: "#voldemort-mtl" })
+	            _react2.default.createElement(
+	                "a-obj-model",
+	                { src: "#voldemort-obj", mtl: "#voldemort-mtl" },
+	                animation
+	            )
 	        )
 	    );
 	};
