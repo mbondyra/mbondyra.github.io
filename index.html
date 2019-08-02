@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Random user page</title>
+  </head>
+  <body>
+    <p id="hi_there">Hi there!</p>
+    <h1 class="h1_classname">Thanks for visiting!</h1>
+    <h3 class="h3_className h3_className-visible">
+      This is a demo page <span class='little_span'>for a recruitment task at Hotjar</span>
+    </h3>
+    <div>
+      <a href='./about-me.html'> LINK IN THE SAME DOMAIN </a>
+      <div>If you want to inject it in your code, it's easy!</div>
+      <h5>Very easy!</h5>
+      <ul>
+        <li>1. Add this script to every page to where you want to add elements to your funnel.</li>
+      </ul>
+      <div style='width:300px; background:#fcecec; border-radius: 5px; padding:10px; margin: 10px 0;'>
+          <code>
+              (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:1234};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+j+h._hjSettings.hjid;
+                a.appendChild(r);
+            })(window,document,' https://hotjar-script.netlify.com/','index.js?id=');
+
+          </code>
+      </div>
+    </div>
+    <form>
+      <label>Here's a form</label>
+      <input type="button" value="button-value" />
+      <input type="radio" id="myRadio" />
+      <div>
+          First name: <input type="text" name="fname" /><br />
+          Last name: <input type="text" name="lname" /><br />
+          <input type="submit" value="Submit" />
+          <textarea rows="4" cols="50">
+            At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+          </textarea>
+      </div>
+    </form>
+    <script>
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1234};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+j+h._hjSettings.hjid;
+          a.appendChild(r);
+        //})(window,document,'http://localhost:8080/','index.js?id=');
+        })(window,document,'https://hotjar-script.netlify.com/','index.js?id=');
+    </script>
+  </body>
+</html>
